@@ -77,26 +77,9 @@ const TimerCountDown = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Prevent hydration mismatch by showing placeholder until client-side mounting
   if (!mounted) {
-    return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-evenly",
-          alignItems: "center",
-          flexWrap: "wrap",
-          margin: "0 auto",
-          width: "100%",
-          maxWidth: 1000,
-        }}
-      >
-        {/* Loading placeholder */}
-        <div style={{ width: 120, height: 120, background: '#f0f0f0', borderRadius: '50%' }}></div>
-        <div style={{ width: 120, height: 120, background: '#f0f0f0', borderRadius: '50%' }}></div>
-        <div style={{ width: 120, height: 120, background: '#f0f0f0', borderRadius: '50%' }}></div>
-        <div style={{ width: 120, height: 120, background: '#f0f0f0', borderRadius: '50%' }}></div>
-      </div>
-    );
+    return <div style={{ height: 120 }}></div>;
   }
 
   const { differenceDays, differenceSeconds, daysDuration } = timeData;

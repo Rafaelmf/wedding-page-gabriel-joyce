@@ -10,76 +10,75 @@
   width: 100vw;
   max-width: 100%;
   margin-bottom: 5em;
-}
 
-.twoColumn {
-  padding: 0 5em;
-  margin-top: 1em;
-  display: grid;
-  gap: 3em;
-  grid-template-columns: 2fr 1.5fr;
-}
-
-.ourStoryDiv {
-  text-align: center; 
-  position: relative;
-
-  > div[aria-label="animation"] {
-    position: absolute;
-    top: -110px;
-  }
-}
-
-.ourStoryTitle {
-  color: $blue-medium;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-
-
-}
-
-.ourStoryTitleDiv {
-    @include flex-center;
-    gap: $spacing-sm;
-
-    div {
-         overflow: visible !important;
-        svg {
-            overflow: visible;
-        }
-    }
-}
-
-.carouselDiv {
-  width: 55vw;
-  padding: 1em;
-  background-color: $white;
-  border-radius: $border-radius-lg;
-}
-
-@include mobile-tablet {
-  .carouselDiv {
-    display: none;
-  }
-  
   .twoColumn {
+    padding: 0 5em;
+    margin-top: 1em;
     display: grid;
-    gap: 0em;
-    grid-template-columns: 1fr;
+    gap: 3em;
+    grid-template-columns: 2fr 1.5fr;
   }
-  
-  .ourStory {
-    padding: 20px;
-  }
-  
-  .ourStoryTitle {
-    width: 60%;
-  }
-  
+
   .ourStoryDiv {
+    text-align: center; 
+    position: relative;
+
     > div[aria-label="animation"] {
-      top: -70px;
+      position: absolute;
+      top: -110px;
+    }
+
+    .ourStoryTitleDiv {
+      @include flex-center;
+      gap: $spacing-sm;
+
+      div {
+        overflow: visible !important;
+        
+        svg {
+          overflow: visible;
+        }
+      }
+
+      .ourStoryTitle {
+        color: $blue-medium;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+      }
+    }
+  }
+
+  .carouselDiv {
+    width: 55vw;
+    padding: 1em;
+    background-color: $white;
+    border-radius: $border-radius-lg;
+  }
+
+  @include mobile-tablet {
+    padding: 20px;
+
+    .carouselDiv {
+      display: none;
+    }
+    
+    .twoColumn {
+      display: grid;
+      gap: 0em;
+      grid-template-columns: 1fr;
+    }
+    
+    .ourStoryDiv {
+      > div[aria-label="animation"] {
+        top: -70px;
+      }
+
+      .ourStoryTitleDiv {
+        .ourStoryTitle {
+          width: 60%;
+        }
+      }
     }
   }
 }
