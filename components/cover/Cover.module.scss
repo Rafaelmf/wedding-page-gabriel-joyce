@@ -1,0 +1,24 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.image {
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.imageMobile {
+  display: none;
+}
+
+@include mobile-tablet {
+  .imageMobile {
+    display: block;
+    width: 100%;
+  }
+  
+  .image {
+    display: none;
+  }
+}

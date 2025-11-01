@@ -1,0 +1,169 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.party {
+  background-color: $blue-medium;
+  color: $gray-light;
+  flex-direction: column;
+  align-items: center;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  max-width: 100%;
+  padding: 1.5em 1.5em;
+}
+
+.partyInternal {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 20px 2.5fr;
+  gap: 2vw;
+  width: 100%;
+
+  * a {
+    color: #bd968f;
+    font-family: $font-primary;
+    font-weight: bolder;
+    font-size: 1.5em;
+  }
+  
+  * p {
+    color: #bd968f;
+    font-family: $font-primary;
+    font-weight: bolder;
+    font-size: 1.5em;
+  }
+}
+
+.map {
+  height: 50vh;
+  width: 40vw;
+  background-color: $white;
+}
+
+.mapCenter {
+  @include flex-center;
+}
+
+.locationContainer {
+  grid-template-columns: repeat(2, minmax(17em, 1fr));
+  gap: 2em;
+  align-items: center;
+}
+
+.avatarSpan {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  grid-column: 1;
+  color: #bd968f;
+  font-family: $font-primary;
+
+  > a {
+    text-decoration: underline;
+
+    &:hover {
+      color: #f4a89b;
+    }
+  }
+}
+
+.armazemPicture {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.text {
+  font-size: 20px !important;
+}
+
+.titleParty {
+  color: $gray-light;
+  justify-content: center;
+  font-size: 2.5em;
+}
+
+.icons {
+  size: 40;
+  font-size: 40 !important;
+  color: #bd968f;
+  margin-left: 15px;
+}
+
+.socialDiv {
+  grid-column: 1 / span 2;
+  display: flex;
+  justify-content: space-around;
+}
+
+.socialMediaDiv {
+  @include flex-center;
+  flex-direction: column;
+}
+
+.SvgDivider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+
+  svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 75px;
+  }
+}
+
+.shapeFill {
+  fill: $blue-medium;
+  background-color: red;
+}
+
+@media (max-width: 1200px) {
+  .timer, .socialTxt, .avatar, .armazemPicture {
+    display: none !important;
+  }
+
+  .map {
+    height: 30vh;
+    width: 80vw;
+  }
+
+  .party {
+    height: 110%;
+    padding: 3.5em 0.5em;
+  }
+
+  .titleParty {
+    font-size: 2.5em !important;
+  }
+  
+  .partyInternal {
+    * p {
+      font-size: 1.2em;
+    }
+    
+    * a {
+      font-size: 1.2em;
+    }
+    
+    grid-template-columns: 1fr !important;
+  }
+
+  .socialDiv, .avatarSpan {
+    grid-column: 1 !important;
+  }
+
+  .locationContainer {
+    grid-template-columns: 1fr !important;
+  }
+}

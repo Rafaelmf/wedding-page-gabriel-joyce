@@ -1,0 +1,171 @@
+@import 'variables';
+@import 'mixins';
+
+// Font faces
+@font-face {
+  font-family: "DreamAvenue";
+  src: url("/fonts/DreamAvenue.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "JosefinSlab";
+  src: url("/fonts/JosefinSlab.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSansLight";
+  src: url("/fonts/OpenSansLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Halimun";
+  src: url("/fonts/Halimun.ttf") format("truetype");
+}
+
+// Animation fix
+div[aria-label="animation"] {
+  margin: 0 !important;
+}
+
+// Base styles
+html,
+body {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  font-family: $font-kalam;
+  font-size: 18px;
+  background-color: $primary-color;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#map {
+  height: 180px;
+}
+
+h1 {
+  font-family: $font-msmadi;
+  font-size: 3em;
+  font-weight: 700;
+  @include flex-center;
+}
+
+// Utility classes
+.icon {
+  margin-right: 15px;
+}
+
+// Ant Design overrides
+.ant-divider-vertical {
+  border-left: 3px dashed #efe6dd !important;
+  height: 100% !important;
+}
+
+.ant-list-item {
+  padding: 1em !important;
+}
+
+.ant-rate-star-full {
+  color: #C0975F !important;
+}
+
+// Layout
+.main {
+  @include flex-column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+section {
+  position: relative;
+  @include flex-column;
+  align-items: center;
+  min-height: 400px;
+  padding-top: 73px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.spacer {
+  aspect-ratio: 960/145;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.flip {
+  transform: rotate(180deg);
+}
+
+// Ant Design card overrides
+.ant-card-body {
+  padding: 0.75em;
+}
+
+// Carousel styles
+.ant-carousel {
+  .slick-dots-bottom {
+    bottom: -18px;
+  }
+
+  .slick-dots {
+    li {
+      margin-right: 10px;
+      height: 30px;
+      width: 30px !important;
+      @include flex-center;
+
+      button {
+        height: 20px;
+        width: 20px;
+        border-radius: $border-radius-round;
+        opacity: 0.7;
+      }
+
+      &.slick-active button {
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+}
+
+.dotsCarrousel {
+  > li {
+    > button {
+      background: #0076cb !important;
+      opacity: 1;
+    }
+
+    &.slick-active > button {
+      background: #0075cb !important;
+      opacity: 1;
+    }
+
+    &::after {
+      height: 0 !important;
+    }
+  }
+}
+
+// Image styles
+.ant-image-img {
+  object-fit: contain;
+}
+
+div.ant-card-cover {
+  height: 100%;
+}
