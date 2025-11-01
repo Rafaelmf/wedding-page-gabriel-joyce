@@ -2,10 +2,7 @@ import dynamic from "next/dynamic";
 import styles from "./Party.module.scss";
 import TimerCountDown from "./TimerCountDown";
 
-import {
-  AiOutlineFacebook,
-  AiOutlineInstagram,
-} from "react-icons/ai";
+import { AiOutlineFacebook, AiOutlineInstagram } from "react-icons/ai";
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { Divider, Avatar } from "antd";
 import Link from "antd/lib/typography/Link";
@@ -67,22 +64,13 @@ const index = () => {
 
             <div className={styles.locationContainer}>
               <div className={styles.avatarSpan}>
-                <a
-                  target="_blank"
-                  href="#"
-                >
+                <a target="_blank" href="#">
                   ATUALIZAR LOCAL DO CASAMENTO
                 </a>
-                <Link
-                  target="_blank"
-                  href="#"
-                >
+                <Link target="_blank" href="#">
                   <AiOutlineFacebook size={50} className={styles.icons} />
                 </Link>
-                <Link
-                  target="_blank"
-                  href="#"
-                >
+                <Link target="_blank" href="#">
                   <AiOutlineInstagram size={50} className={styles.icons} />
                 </Link>
               </div>

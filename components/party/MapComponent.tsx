@@ -20,18 +20,13 @@ const Map = () => {
   return (
     <div
       onClick={() => {
-        if (typeof window === 'undefined') return;
-        window
-          .open(
-            "https://www.google.com/maps/place/Armazem+de+Maria/@-22.0174671,-47.8582099,17z/data=!3m1!4b1!4m5!3m4!1s0x94b8769665c9da1b:0x1e70e60b33f58043!8m2!3d-22.01747!4d-47.8560005",
-            "_blank"
-          )
-          ?.focus();
+        if (typeof window === "undefined") return;
+        // window.open("", "_blank")?.focus();
       }}
       className={styles.map}
     >
       <MapContainer
-        center={[-22.0173669, -47.8567228]}
+        center={[-22.1173669, -47.8567228]}
         zoom={15}
         scrollWheelZoom={false}
         style={{ height: "100%", width: "100%" }}
@@ -40,7 +35,7 @@ const Map = () => {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker
+        {/* <Marker
           ref={leafletRef}
           icon={marker}
           position={[-22.0173669, -47.8567228]}
@@ -52,7 +47,7 @@ const Map = () => {
               Tangara, São Carlos - SP, 13568-100
             </p>
           </Popup>
-        </Marker>
+        </Marker> */}
       </MapContainer>
     </div>
   );
