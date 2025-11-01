@@ -149,7 +149,7 @@ const index = () => {
                 width: "18em",
                 height: "28em",
                 padding: "1em",
-                borderRadius: "20px",
+                borderRadius: "10px",
                 display: "flex",
                 flexDirection: "column",
                 overflow: "hidden",
@@ -157,7 +157,7 @@ const index = () => {
               cover={
                 <img
                   style={{
-                    borderRadius: "20px 20px 0 0",
+                    borderRadius: "10px",
                     width: "100%",
                     height: "180px",
                     objectFit: "cover",
