@@ -1,5 +1,5 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 // Main party section container
 .party {
@@ -30,7 +30,7 @@
         font-weight: bolder;
         font-size: 1.5em;
       }
-      
+
       p {
         color: #bd968f;
         font-family: $font-primary;
@@ -158,7 +158,7 @@
         p {
           font-size: 1.2em;
         }
-        
+
         a {
           font-size: 1.2em;
         }
@@ -172,7 +172,7 @@
         grid-template-columns: 1fr !important;
       }
 
-      .socialDiv, 
+      .socialDiv,
       .avatarSpan {
         grid-column: 1 !important;
       }
@@ -185,9 +185,9 @@
   }
 
   // Hide complex elements on mobile
-  .timer, 
-  .socialTxt, 
-  .avatar, 
+  .timer,
+  .socialTxt,
+  .avatar,
   .armazemPicture {
     display: none !important;
   }

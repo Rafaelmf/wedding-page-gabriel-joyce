@@ -5,7 +5,7 @@ import styles from "./Carousel.module.scss";
 const CarouselPhotos = () => {
   return (
     <div className={styles.carouselDiv}>
-      <Carousel dots={{ className: "dotsCarrousel" }}>
+      <Carousel autoplay dots={{ className: "dotsCarrousel" }}>
         <div className={styles.contentStyle}>
           <Image
             width="100%"
@@ -39,10 +39,18 @@ const CarouselPhotos = () => {
           />
         </div>
         <div className={styles.contentStyle}>
-          <Image width="100%" preview={false} src="./carousel-photos/image7.jpg" />
+          <Image
+            width="100%"
+            preview={false}
+            src="./carousel-photos/image7.jpg"
+          />
         </div>
         <div className={styles.contentStyle}>
-          <Image width="100%" preview={false} src="./carousel-photos/image2.jpg" />{" "}
+          <Image
+            width="100%"
+            preview={false}
+            src="./carousel-photos/image2.jpg"
+          />{" "}
         </div>
       </Carousel>
     </div>

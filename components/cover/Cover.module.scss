@@ -1,27 +1,27 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 // Cover section styles - contains both desktop and mobile images
 // Desktop cover image
 .image {
-z-index: -1;
-object-fit: cover;
-width: 100%;
-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 
-    // Hide on mobile/tablet
-    @include mobile-tablet {
-        display: none;
-    }
+  // Hide on mobile/tablet
+  @include mobile-tablet {
+    display: none;
+  }
 }
 
 // Mobile cover image
 .imageMobile {
-display: none;
+  display: none;
 
-// Show on mobile/tablet
-@include mobile-tablet {
+  // Show on mobile/tablet
+  @include mobile-tablet {
     display: block;
     width: 100%;
-}
+  }
 }

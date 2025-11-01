@@ -1,5 +1,5 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 .ourStory {
   background-color: $gray-light;
@@ -20,7 +20,7 @@
   }
 
   .ourStoryDiv {
-    text-align: center; 
+    text-align: center;
     position: relative;
 
     > div[aria-label="animation"] {
@@ -34,7 +34,7 @@
 
       div {
         overflow: visible !important;
-        
+
         svg {
           overflow: visible;
         }
@@ -62,13 +62,13 @@
     .carouselDiv {
       display: none;
     }
-    
+
     .twoColumn {
       display: grid;
       gap: 0em;
       grid-template-columns: 1fr;
     }
-    
+
     .ourStoryDiv {
       > div[aria-label="animation"] {
         top: -70px;
