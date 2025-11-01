@@ -1,6 +1,7 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
+// Main quiz container with grid layout
 .quizDiv {
   padding: 5%;
   display: grid;
@@ -8,82 +9,94 @@
   grid-template-columns: repeat(auto-fill, minmax(14em, 1fr));
   row-gap: 1.4em;
   justify-items: center;
-}
 
-.quizCard {
-  width: 13em;
-  height: 13em;
-  display: flex;
-  padding: 1em;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 15px;
-  background-color: $teal-medium;
-  font-family: $font-primary;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1em;
-  border: 1px solid #3b5863 !important;
-  box-shadow: $box-shadow;
-}
-
-.quizTitleDiv {
-  @include flex-center;
-  flex-direction: column;
-  grid-row: 1 / span 3;
-  grid-column: 1 / span 2;
-}
-
-.quizTitleHeading {
-  color: $blue-medium;
-  font-family: $font-heading;
-  font-size: 4.5em;
-  text-align: center;
-}
-
-.quizDescription {
-  color: $blue-medium;
-  font-family: $font-primary;
-  font-size: 2em;
-}
-
-.backQuizCard {
-  background-color: $brown-dark;
-  border: 1px solid #6d352a !important;
-}
-
-.quizCardBody {
-  font-size: 1em;
-  @include flex-center;
-  flex-direction: column;
-  gap: 0.3em;
-  color: #e4e6ea;
-}
-
-.backTxt {
-  font-size: 1em;
-  color: #fffdef;
-  margin-bottom: 0 !important;
-}
-
-@media (max-width: 1400px) {
+  // Quiz title section
   .quizTitleDiv {
-    grid-column: 1;
-  }
-}
+    @include flex-center;
+    flex-direction: column;
+    grid-row: 1 / span 3;
+    grid-column: 1 / span 2;
 
-@include mobile-tablet {
-  .quizTitleDiv {
-    top: -30px;
-    grid-column: 1;
+    // Main title
+    .quizTitleHeading {
+      color: $blue-medium;
+      font-family: $font-heading;
+      font-size: 4.5em;
+      text-align: center;
+
+      // Medium screen adjustments
+      @media (max-width: 1400px) {
+        // Parent grid column adjustment handled below
+      }
+
+      // Mobile/tablet responsive
+      @include mobile-tablet {
+        font-size: 3em;
+      }
+    }
+
+    // Description text
+    .quizDescription {
+      color: $blue-medium;
+      font-family: $font-primary;
+      font-size: 2em;
+
+      // Mobile/tablet responsive
+      @include mobile-tablet {
+        font-size: 1em;
+      }
+    }
+
+    // Medium screen layout adjustment
+    @media (max-width: 1400px) {
+      grid-column: 1;
+    }
+
+    // Mobile/tablet layout adjustment
+    @include mobile-tablet {
+      top: -30px;
+      grid-column: 1;
+    }
   }
-  
-  .quizTitleHeading {
-    font-size: 3em;
-  }
-  
-  .quizDescription {
+
+  // Individual quiz cards (front side)
+  .quizCard {
+    width: 13em;
+    height: 13em;
+    display: flex;
+    padding: 1em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: $teal-medium;
+    font-family: $font-primary;
+    text-align: center;
+    font-weight: bold;
     font-size: 1em;
+    border: 1px solid #3b5863 !important;
+    box-shadow: $box-shadow;
+
+    // Card body content
+    .quizCardBody {
+      font-size: 1em;
+      @include flex-center;
+      flex-direction: column;
+      gap: 0.3em;
+      color: #e4e6ea;
+    }
+  }
+
+  // Quiz cards (back side)
+  .backQuizCard {
+    background-color: $brown-dark;
+    border: 1px solid #6d352a !important;
+
+    // Text on the back of cards
+    .backTxt {
+      font-size: 1em;
+      color: #fffdef;
+      margin-bottom: 0 !important;
+    }
   }
 }

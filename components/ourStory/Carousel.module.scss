@@ -1,25 +1,26 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
+// Carousel container component styles
 .carouselDiv {
   width: 55vw;
   height: fit-content;
   padding: 1em;
   background-color: $white;
   border-radius: $border-radius-lg;
-}
 
-.contentStyle {
-  height: 529px;
-  color: $white;
-  background: $white;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-}
+  // Individual carousel slide content
+  .contentStyle {
+    height: 529px;
+    color: $white;
+    background: $white;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
 
-@include mobile-tablet {
-  .carouselDiv {
+  // Mobile and tablet responsive behavior
+  @include mobile-tablet {
     display: none;
   }
 }

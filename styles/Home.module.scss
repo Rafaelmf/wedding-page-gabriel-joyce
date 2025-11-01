@@ -8,6 +8,7 @@
 .footer {
   @include flex-center;
   padding: 10px 0;
+  gap: $spacing-sm;
   border-top: 1px solid #eaeaea;
   width: 100%;
 }
