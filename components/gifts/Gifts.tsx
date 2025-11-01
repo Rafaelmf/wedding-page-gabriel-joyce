@@ -83,7 +83,6 @@ const index = () => {
   const [messageTxt, setMessageTxt] = useState<string>("");
   const form = useRef<any>(null);
 
-
   const openModal = (gift: Gift) => {
     setCurreGift(gift);
   };
@@ -100,10 +99,10 @@ const index = () => {
         "Uxk454g_u9hrTkmnR"
       )
       .then(
-        (result) => {
+        result => {
           message.success("Mensagem enviada com sucesso!");
         },
-        (error) => {
+        error => {
           alert("Erro");
           message.error("Erro, tente novamente mais tarde.");
         }
@@ -128,7 +127,7 @@ const index = () => {
     <>
       <section className={styles.gifts}>
         <h1 style={{ color: "#345870", textAlign: "center" }}>
-          <Lottie height={140} width={100} options={defaultOptions} />
+          <Lottie height={110} width={80} options={defaultOptions} />
           {/* <IoGiftSharp className="icon" /> */}
           Lista de Presentes
         </h1>
@@ -141,7 +140,7 @@ const index = () => {
           <br />
         </p>
         <div className={styles.giftsGrid}>
-          {gifts.map((g) => (
+          {gifts.map(g => (
             <Card
               onClick={() => openModal(g)}
               key={g.name}
@@ -161,7 +160,7 @@ const index = () => {
                     borderRadius: "20px 20px 0 0",
                     width: "100%",
                     height: "180px",
-                    objectFit: "cover"
+                    objectFit: "cover",
                   }}
                   alt={g.name}
                   src={g.imgUrl}
@@ -248,7 +247,7 @@ const index = () => {
                 <form className={styles.form} ref={form} onSubmit={sendEmail}>
                   <label>Nome:</label>
                   <Input
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={e => setName(e.target.value)}
                     value={name}
                     name="from_name"
                     placeholder="Nome"
@@ -256,7 +255,7 @@ const index = () => {
 
                   <label>Mensagem:</label>
                   <TextArea
-                    onChange={(e) => setMessageTxt(e.target.value)}
+                    onChange={e => setMessageTxt(e.target.value)}
                     value={messageTxt}
                     name="message"
                     placeholder="Mensagem..."

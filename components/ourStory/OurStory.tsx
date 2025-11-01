@@ -25,19 +25,19 @@ const OurStory: React.FC = () => {
           </div>
           <p
             style={{
-              fontFamily: "DreamAvenue",
-              fontSize: "1.2rem",
               textAlign: "center",
+              fontSize: "1.2rem",
+              lineHeight: "2rem",
             }}
           >
-            Apesar de termos muitos amigos em comum desde o começo da
-            graduação, o universo nos colocou no caminho um do outro somente em
-            2018. Nos conhecemos, nos apaixonamos e desde então nos
-            impulsionamos a ser a melhor versão de nós mesmos. Não poderíamos
-            ter construído uma história tão cheia de amor, união e compreensão
-            sem os nossos amigos, colegas, mães, pais, irmãos e familiares ao
-            nosso redor. Ficamos imensamente felizes em poder contar com a
-            presença dessas pessoas no dia mais especial de nossas vidas.
+            Apesar de termos muitos amigos em comum desde o começo da graduação,
+            o universo nos colocou no caminho um do outro somente em 2018. Nos
+            conhecemos, nos apaixonamos e desde então nos impulsionamos a ser a
+            melhor versão de nós mesmos. Não poderíamos ter construído uma
+            história tão cheia de amor, união e compreensão sem os nossos
+            amigos, colegas, mães, pais, irmãos e familiares ao nosso redor.
+            Ficamos imensamente felizes em poder contar com a presença dessas
+            pessoas no dia mais especial de nossas vidas.
           </p>
         </div>
       </div>

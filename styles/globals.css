@@ -1,25 +1,24 @@
-
-@font-face{
+@font-face {
   font-family: "DreamAvenue";
   src: url("/fonts/DreamAvenue.ttf") format("truetype");
 }
 
-@font-face{
+@font-face {
   font-family: "JosefinSlab";
   src: url("/fonts/JosefinSlab.ttf") format("truetype");
 }
 
-@font-face{
+@font-face {
   font-family: "OpenSansLight";
   src: url("/fonts/OpenSansLight.ttf") format("truetype");
 }
 
-@font-face{
+@font-face {
   font-family: "Halimun";
   src: url("/fonts/Halimun.ttf") format("truetype");
 }
 div[aria-label="animation"] {
-  margin: 0 !important
+  margin: 0 !important;
 }
 
 html,
@@ -27,10 +26,10 @@ body {
   position: absolute;
   padding: 0;
   margin: 0;
-  max-width: 100% ;
+  max-width: 100%;
   height: 100%;
   width: 100%;
-  font-family: 'Kalam', cursive;
+  font-family: "Kalam", cursive;
   font-size: 18px;
   background-color: #f2f2f2;
 }
@@ -44,10 +43,12 @@ a {
   box-sizing: border-box;
 }
 
-#map { height: 180px; }
+#map {
+  height: 180px;
+}
 
 h1 {
-  font-family: 'Ms Madi';
+  font-family: "Ms Madi";
   font-size: 3em;
   font-weight: 700;
   display: flex;
@@ -68,13 +69,12 @@ h1 {
   /* background-color: #eeeeee; */
 }
 
-
 .ant-list-item {
   padding: 1em !important;
 }
 
 .ant-rate-star-full {
-  color: #C0975F !important
+  color: #c0975f !important;
 }
 
 .main {
@@ -128,8 +128,8 @@ section {
 }
 
 .ant-carousel .slick-dots li button {
-  height: 20px ;
-  width: 20px ;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   opacity: 0.7;
 }
@@ -146,9 +146,15 @@ section {
 .dotsCarrousel > li:nth-child(5) > button { background: #0075cb !important; opacity: 1; }
 .dotsCarrousel > li:nth-child(6) > button { background: #6f30a4 !important; opacity: 1; } */
 
-.dotsCarrousel > li > button { background: #0076cb !important; opacity: 1; }
+.dotsCarrousel > li > button {
+  background: #0076cb !important;
+  opacity: 1;
+}
 
-.dotsCarrousel > li.slick-active > button { background: #0075cb !important; opacity: 1; }
+.dotsCarrousel > li.slick-active > button {
+  background: #0075cb !important;
+  opacity: 1;
+}
 
 .dotsCarrousel > li::after {
   height: 0 !important;
