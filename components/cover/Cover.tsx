@@ -14,7 +14,7 @@ const Cover = () => {
         <img
           style={{ zIndex: -1 }}
           className={styles.imageMobile}
-          src="./cover/front_mobile.png"
+          src="./cover/cover_mobile.png"
           alt="Main Photo"
         />
       </div>

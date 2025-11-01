@@ -34,11 +34,21 @@
   color: $blue-medium;
   display: flex;
   justify-content: center;
+  margin: 0;
+
+
 }
 
 .ourStoryTitleDiv {
     @include flex-center;
-    gap: $spacing-xs;
+    gap: $spacing-sm;
+
+    div {
+         overflow: visible !important;
+        svg {
+            overflow: visible;
+        }
+    }
 }
 
 .carouselDiv {

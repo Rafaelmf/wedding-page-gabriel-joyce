@@ -113,7 +113,7 @@ const getListComponent = (list: any) => (
         <List.Item
           className={styles.listItem}
           onClick={() => {
-            if (window === null) return;
+            if (typeof window === 'undefined') return;
             window.open(f.link, "_blank")?.focus();
           }}
         >
