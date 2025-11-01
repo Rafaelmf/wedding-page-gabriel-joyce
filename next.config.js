@@ -6,8 +6,8 @@ const nextConfig = {
     unoptimized: true,
   },
   assetPrefix:
-    process.env.NODE_ENV === "production" ? "/wedding-invite-page/" : "",
-  basePath: process.env.NODE_ENV === "production" ? "/wedding-invite-page" : "",
+    process.env.NODE_ENV === "production" ? "/wedding-page-gabriel-joyce/" : "",
+  basePath: process.env.NODE_ENV === "production" ? "/wedding-page-gabriel-joyce" : "",
   output: "export",
 };
 
