@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: center;
   display: flex;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
   width: 100%;
   box-sizing: border-box;
   font-family: $font-primary;
@@ -29,6 +29,23 @@
     align-items: center;
     justify-items: center;
 
+    .giftCard {
+      width: 18em;
+      height: 23em;
+      padding: 0.8em;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .giftImage {
+      border-radius: 10px;
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
     // Individual gift card content
     .cardContent {
       @include flex-center;
@@ -41,6 +58,12 @@
         margin: 0 !important;
         font-size: 1.1em;
         text-align: center;
+      }
+
+      .price {
+        margin-top: 0.5em !important;
+        font-size: 1.2em;
+        color: $brown-dark;
       }
 
       > button {
@@ -58,43 +81,43 @@
       }
     }
   }
+}
 
-  // Modal container for gift selection
-  .modalContainer {
-    display: grid;
-    grid-template-columns: 1fr 30px 1fr;
-    gap: 1em;
-    color: $blue-dark;
-    font-family: $font-primary;
-    font-weight: bold;
+// Modal container for gift selection
+.modalContainer {
+  display: grid;
+  grid-template-columns: 1fr 30px 1fr;
+  gap: 1em;
+  color: $blue-dark;
+  font-family: $font-primary;
+  font-weight: bold;
 
-    // Payment description section
-    .paymentDescription {
-      font-size: 1.3em;
-      width: 100%;
-      display: flex;
-      align-items: center;
+  // Payment description section
+  .paymentDescription {
+    font-size: 1.3em;
+    width: 100%;
+    display: flex;
+    align-items: center;
 
-      // Hide certain elements on mobile
-      @media (max-width: 800px) {
-        > div {
-          display: none;
-        }
+    // Hide certain elements on mobile
+    @media (max-width: 800px) {
+      > div {
+        display: none;
       }
     }
+  }
 
-    // Form container
-    .form {
-      gap: 15px;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
+  // Form container
+  .form {
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 
-    // Mobile responsive layout
-    @media (max-width: 800px) {
-      grid-template-columns: 1fr;
-    }
+  // Mobile responsive layout
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
   }
 }
 

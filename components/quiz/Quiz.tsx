@@ -49,7 +49,7 @@ const Quiz: React.FC = () => {
   });
 
   const flipCard = (key: string, flip: boolean) => {
-    setIsFlipped((prev) => {
+    setIsFlipped(prev => {
       return {
         ...prev,
         [key]: flip,
@@ -61,10 +61,10 @@ const Quiz: React.FC = () => {
     <section className={styles.quizDiv}>
       <div className={styles.quizTitleDiv}>
         <span className={styles.quizTitleHeading}>Quiz sobre o casal</span>
-        <span className={styles.quizDescription}>Respostas nos cards</span>
+        <span className={styles.quizDescription}>Respostas nos cartões</span>
       </div>
 
-      {quizCards.map((card) => (
+      {quizCards.map(card => (
         <div
           key={card.name}
           onMouseEnter={() => flipCard(card.name, true)}

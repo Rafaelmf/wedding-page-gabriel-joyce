@@ -8,26 +8,30 @@ const accommodationList = [
   {
     title: "Exemplo do Hotel 1",
     description: "ATUALIZAR: Descrição do hotel próximo ao local da cerimônia.",
-    price: 4,
+    link: "#",
   },
   {
     title: "Exemplo do Hotel 2",
     description: "ATUALIZAR: Descrição do hotel próximo ao local da cerimônia.",
-    price: 4,
+    link: "#",
   },
   {
     title: "Exemplo do Hotel 3",
     description: "ATUALIZAR: Descrição do hotel próximo ao local da cerimônia.",
-    price: 4,
+    link: "#",
   },
 ];
 
 const beauty = [
   {
-    title: "ATUALIZAR: Nome do Salão",
-    description:
-      "ATUALIZAR: Espaço de beleza com serviços completos para o grande dia.",
-    price: 4,
+    title: " Nome do Salão",
+    description: " Espaço de beleza com serviços completos para o grande dia.",
+    link: "#",
+  },
+  {
+    title: "Exemplo do Salão 2",
+    description: "Espaço de beleza com serviços completos para o grande dia.",
+    link: "#",
   },
 ];
 
@@ -37,21 +41,18 @@ const foodList = [
     description:
       "ATUALIZAR: Descrição do restaurante recomendado para os convidados.",
     link: "#",
-    price: 4,
   },
   {
     title: "Restaurante Exemplo 2",
     description:
       "ATUALIZAR: Descrição do restaurante recomendado para os convidados.",
     link: "#",
-    price: 3,
   },
   {
     title: "Restaurante Exemplo 3",
     description:
       "ATUALIZAR: Descrição do restaurante recomendado para os convidados.",
     link: "#",
-    price: 4,
   },
 ];
 
@@ -61,21 +62,18 @@ const drinkList = [
     description:
       "Descriçao, localizaçao e especialidades do café recomendado para os convidados.",
     link: "#",
-    price: 4,
   },
   {
     title: "Exemplo Café 2",
     description:
       "Descriçao, localizaçao e especialidades do café recomendado para os convidados.",
     link: "#",
-    price: 4,
   },
   {
     title: "Exemplo Café 3",
     description:
       "Descriçao, localizaçao e especialidades do café recomendado para os convidados.",
     link: "#",
-    price: 4,
   },
 ];
 
