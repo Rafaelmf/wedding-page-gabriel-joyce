@@ -1,15 +1,20 @@
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import L from "leaflet";
+import {
+  MapContainer,
+  //  Marker,
+  //   Popup,
+  TileLayer,
+} from "react-leaflet";
+// import L from "leaflet";
 
 import "leaflet/dist/leaflet.css";
 import "./Party.scss";
 import { useEffect, useRef } from "react";
 
 const Map = () => {
-  var marker = L.icon({
-    iconUrl: "marker.png",
-    iconSize: [38, 38], // size of the icon
-  });
+  // const marker = L.icon({
+  //   iconUrl: "marker.png",
+  //   iconSize: [38, 38], // size of the icon
+  // });
 
   const leafletRef = useRef<any>(null);
   useEffect(() => {

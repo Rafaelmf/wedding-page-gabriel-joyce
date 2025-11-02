@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 // Responsive breakpoints
 @mixin mobile {
   @media (max-width: #{$mobile - 1px}) {

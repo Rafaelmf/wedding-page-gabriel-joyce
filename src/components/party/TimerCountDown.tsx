@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 
 const minuteSeconds = 60;
 const hourSeconds = 3600;
 const daySeconds = 86400;
 
-const colorsList = [
-  "df0c06",
-  "fd4600",
-  "#ffb400",
-  "#00a364",
-  "#0075cb",
-  "#6f30a4",
-];
+// const colorsList = [
+//   "df0c06",
+//   "fd4600",
+//   "#ffb400",
+//   "#00a364",
+//   "#0075cb",
+//   "#6f30a4",
+// ];
 
 const timerProps = {
   isPlaying: true,
@@ -52,13 +52,16 @@ const TimerCountDown = () => {
 
   useEffect(() => {
     setMounted(true);
-    
+
     const calculateTime = () => {
       const startTime = new Date();
       const endTime = new Date("2026-04-22");
 
       // Calculate difference in milliseconds, then convert to seconds
-      const Difference_In_Time = Math.max(0, endTime.getTime() - startTime.getTime());
+      const Difference_In_Time = Math.max(
+        0,
+        endTime.getTime() - startTime.getTime()
+      );
       const Difference_In_Seconds = Math.floor(Difference_In_Time / 1000);
       const Difference_In_Days = Math.floor(Difference_In_Seconds / daySeconds);
       const daysDuration = Difference_In_Days * daySeconds;
@@ -101,10 +104,8 @@ const TimerCountDown = () => {
         duration={daysDuration}
         initialRemainingTime={daysDuration}
       >
-        {({ elapsedTime, color }) => (
-          <span style={{ color }}>
-            {renderTime("Dias", differenceDays)}
-          </span>
+        {({ color }) => (
+          <span style={{ color }}>{renderTime("Dias", differenceDays)}</span>
         )}
       </CountdownCircleTimer>
       <CountdownCircleTimer
@@ -113,7 +114,7 @@ const TimerCountDown = () => {
         trailColor="#f2f2f2"
         duration={daySeconds}
         initialRemainingTime={differenceSeconds % daySeconds}
-        onComplete={(totalElapsedTime) => ({
+        onComplete={totalElapsedTime => ({
           shouldRepeat: differenceSeconds - totalElapsedTime > hourSeconds,
         })}
       >
@@ -121,8 +122,7 @@ const TimerCountDown = () => {
           <span style={{ color }}>
             {renderTime("Horas", getTimeHours(daySeconds - elapsedTime))}
           </span>
-        )
-        }
+        )}
       </CountdownCircleTimer>
       <CountdownCircleTimer
         {...timerProps}
@@ -130,7 +130,7 @@ const TimerCountDown = () => {
         trailColor="#f2f2f2"
         duration={hourSeconds}
         initialRemainingTime={differenceSeconds % hourSeconds}
-        onComplete={(totalElapsedTime) => ({
+        onComplete={totalElapsedTime => ({
           shouldRepeat: differenceSeconds - totalElapsedTime > minuteSeconds,
         })}
       >
@@ -146,7 +146,7 @@ const TimerCountDown = () => {
         trailColor="#f2f2f2"
         duration={minuteSeconds}
         initialRemainingTime={differenceSeconds % minuteSeconds}
-        onComplete={(totalElapsedTime) => ({
+        onComplete={totalElapsedTime => ({
           shouldRepeat: differenceSeconds - totalElapsedTime > 0,
         })}
       >

@@ -1,10 +1,10 @@
-import React, { Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 import "./Party.scss";
 import TimerCountDown from "./TimerCountDown";
 
 import { AiOutlineFacebook, AiOutlineInstagram } from "react-icons/ai";
-import { FaMapMarkedAlt } from "react-icons/fa";
-import { Divider, Avatar } from "antd";
+// import { FaMapMarkedAlt } from "react-icons/fa";
+import { Divider } from "antd";
 import Link from "antd/lib/typography/Link";
 
 import Lottie from "react-lottie";

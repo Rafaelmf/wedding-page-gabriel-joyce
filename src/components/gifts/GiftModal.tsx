@@ -1,7 +1,7 @@
-import { Modal, Divider, Input, Button, message } from "antd";
+import { Modal, Divider, Input, Button } from "antd";
 import { useRef, useState } from "react";
 import { IoGiftSharp, IoSendOutline } from "react-icons/io5";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import Lottie from "react-lottie";
 import animationData from "./gift.json";
 import loveAnimation from "./loveAnimation.json";
